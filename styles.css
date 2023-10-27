@@ -1,0 +1,66 @@
+body {
+  background-color: black;
+  background-image: url("ruleta.gif"); /* Imagen de fondo por defecto */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* Evita la barra de desplazamiento vertical */
+}
+
+.container {
+  text-align: center;
+  max-width: 400px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.alert-box {
+  padding: 20px;
+  display: none;
+}
+
+.alert-content {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+
+#button-container {
+  margin-top: 20px;
+}
+
+#ruleta-container {
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+  width: 100%; /* Hacer que el contenedor de la ruleta ocupe todo el ancho */
+}
+
+.ruleta {
+  width: 100%; /* Hacer que la imagen de la ruleta ocupe todo el ancho */
+  max-height: 100vh; /* Establecer una altura máxima para evitar que la imagen sea demasiado alta */
+  background-image: url("ruleta.gif"); /* URL de la imagen de la ruleta girando */
+  background-repeat: no-repeat;
+  background-size: contain; /* Utiliza la imagen completa sin cortarla ni estirarla */
+  background-position: center;
+}
+
+.girando {
+  animation: girarRuleta 1s linear infinite; /* Animación de giro durante 5 segundos */
+}
+
+@keyframes girarRuleta {
+  to {
+    transform: rotate(360deg); /* Gira la ruleta 360 grados */
+  }
+}
