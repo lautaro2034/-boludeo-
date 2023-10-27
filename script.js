@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function mostrarAlerta(palabraActual) {
     alertContent.innerHTML =
-      "Palabra anterior: " +
+      "ación anterior: " +
       palabraAnterior +
-      "<br>Palabra actual: " +
+      "<br>ación actual: " +
       palabraActual;
     alertBox.style.display = "block";
     palabraAnterior = palabraActual; // Actualizar la palabra anterior
